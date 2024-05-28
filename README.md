@@ -35,23 +35,13 @@
 #### ANN (Artificial Neural Network), 인공 신경망
 - 은닉층이 1개일 경우 이를 인공 신경망이라고 한다.
 
-### DNN (Deep Neural Network), 심층 신경망
+#### DNN (Deep Neural Network), 심층 신경망
 - 은닉층이 2개 이상일 경우 이를 심층 신경망이라고 한다.
 
 #### Back-propagation, 역전파
 - 심층 신경망에서 최종 출력(예측)을 하기 위한 식이 생기지만 식이 너무 복잡해지기 때문에 편미분을 진행하기에 한계가 있다.
 - 즉, 편미분을 통해 가중치 값을 구하고, 경사 하강법을 통해 가중치 값을 업데이트 하며, 손실 함수의 최소값을 찾아야 하는데,  
   순방향으로는 복잡한 미분식을 계산할 수가 없다. 따라서 미분의 연쇄 법칙(Chain Rule)을 사용하여 역방향으로 편미분을 진행한다.
-
-#### 합성 함수의 미분
-<img src="https://github.com/SOYOUNGdev/study_deep_learning/assets/115638411/1ffe8f54-eb63-4f93-95c7-ccdbe3db1360" width="150" style="margin-left: 0">  
-
----
-<img src="https://github.com/SOYOUNGdev/study_deep_learning/assets/115638411/5b32989b-b818-4cc4-9288-edffad81ef60" width="550" style="margin-left: 0">  
-
-<img src="https://github.com/SOYOUNGdev/study_deep_learning/assets/115638411/9a1ad3d4-f687-47fe-b228-d27942356f13" width="800" style="margin-left: 0">  
-<img src="https://github.com/SOYOUNGdev/study_deep_learning/assets/115638411/c586deb3-d599-4097-9899-1e90e199ed46" width="800" style="margin-left: 0">  
-<img src="https://github.com/SOYOUNGdev/study_deep_learning/assets/115638411/0117bd23-8427-49f9-ade0-9c5901ca34d4" width="500" style="margin-left: 0">  
 
 
 
