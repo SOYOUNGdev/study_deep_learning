@@ -147,3 +147,31 @@ save_weight_only=False, mode='auto')**
 - Convolution이 적용된 feature map의 일정 영역별로 하나의 값을 추출하여 feature map의 사이즈를 줄인다.
 - Max Pooling과 Average Pooling이 있으며, Max Pooling은 중요도가 가장 높은 feature를 추출하고, Average Pooling은 전체를 버무려서 추출한다.
 
+### <a href="https://github.com/SOYOUNGdev/study_deep_learning/wiki/CH08.-CNN-performance-%E2%80%90-Weight-Initialization,-BN,-GAP,-Weight-Regularization">📍CNN Performance</a>
+- CNN 모델을 제작할 때, 다양한 기법을 통해 성능 개선 및 과적합 개선이 가능하다.
+
+#### Weight Initialization, 가중치 초기화
+- 처음 가중치를 어떻게 줄 것인지를 정하는 방법이며, 처음 가중치를 어떻게 설정하느냐에 따라 모델의 성능이 크게 달라질 수 있다.
+  
+> 1. 사비에르 글로로트 초기화
+> - 고정된 표준편차를 사용하지 않고, 이전 층의 노드 수에 맞게 현재 층의 가중치를 초기화한다.
+
+> 2. 카이밍 히 초기화
+> - 고정된 표준편차를 사용하지 않고, 이전 층의 노드 수에 맞게 현재 층의 가중치를 초기화한다.
+
+#### Batch Normalization, 배치 정규화
+- 가중치를 초기화할 때 민감도를 감소시키고, 학습 속도 증가시키며, 모델을 일반화하기 위해서 사용한다.
+
+#### Batch Size
+- batch size를 작게 하면, 적절한 noise가 생겨서 overfitting을 방지하게 되고, 모델의 성능을 향상시키는 계기가 될 수 있지만, 너무 작아서는 안된다.
+- batch size를 너무 작게 하는 경우에는 batch당 sample수가 작아져서 훈련 데이터를 학습하는 데에 부족할 수 있다.
+
+#### Global Avereage Pooling
+- 이전의 Pooling들은 면적을 줄이기 위해 사용했지만, Global Average Pooling은 면적을 없애고 채널 수 만큼 값을 나오게 한다.
+- Flatten 후에 Classification Dense Layer로 이어지면서 많은 파라미터들로 인한 overfitting 유발 가능성 증대 및 학습 시간 증가로 이어지기 때문에  
+  맨 마지막 feature map의 채널 수가 크다면 Global Average Pooling을 적용하는 것이 더 나을 수 있다.
+
+#### Weight Regularization (가중치 규제), Weight Decay (가중치 감소)
+- 기존 가중치에 특정 연산을 수행하여 loss function의 출력 값과 더해주면 loss function의 결과를 어느정도 제어할 수 있게 된다.
+- kernel_regularizer 파라미터에서 l1, l2을 선택할 수 있다.
+
