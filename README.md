@@ -10,6 +10,8 @@
 
 <img src="https://github.com/SOYOUNGdev/study_deep_learning/assets/115638411/5658102f-39c5-4a1b-ae4a-99c35d64b174" style="margjin-left: 0">
 
+---
+
 ### 📍<a href="https://github.com/SOYOUNGdev/study_deep_learning/wiki/CH01.-SLP-%E2%80%90-Single-Layer-Perceptron">SLP (Single Layer Perceptron), 단층 퍼셉트론, 단일 퍼셉트론 </a>
 
 - 가장 단순한 형태의 신경망으로서, Hidden Layer가 없고 Single Layer로 구성되어 있다.
@@ -43,10 +45,12 @@
 - 즉, 편미분을 통해 가중치 값을 구하고, 경사 하강법을 통해 가중치 값을 업데이트 하며, 손실 함수의 최소값을 찾아야 하는데,  
   순방향으로는 복잡한 미분식을 계산할 수가 없다. 따라서 미분의 연쇄 법칙(Chain Rule)을 사용하여 역방향으로 편미분을 진행한다.
 
+---
+
 ### 📍<a href="https://github.com/SOYOUNGdev/study_deep_learning/wiki/CH03.-Activation-Fuction-%E2%80%90-sigmoid,-softmax,-tanh,-relu">Activation Function, 활성화 함수</a>
 
 - 인공 신경망에서 입력 값에 가중치를 곱한 뒤 합한 결과를 적용하는 함수이다.
----
+
 1. 시그모이드 함수
    - 은닉층이 아닌 최종 활성화 함수 즉, 출력층에서 사용된다.
    
@@ -59,6 +63,8 @@
    
 4. 렐루 함수
    - 대표적인 은닉층의 활성 함수이다.
+
+---
 
 ### 📍<a href="https://github.com/SOYOUNGdev/study_deep_learning/wiki/CH04.-Optimizer-%E2%80%90-Momentum,-AdaGrad,-RMSProp,-*Adam">Optimizer, 최적화</a>
 - 최적의 경사 하강법을 적용하기 위해 필요하며, 최소값을 찾아가는 방법들을 의미한다.
@@ -79,6 +85,8 @@
 #### Adam (Adaptive Moment Estimation)
 - Momentum과 RMSProp 두 가지 방식을 결합한 형태로서, 진행하던 속도에 관성을 주고, 지수 가중 평균법을 적용한 알고리즘이다.
 
+---
+
 ### 📍<a href="https://github.com/SOYOUNGdev/study_deep_learning/wiki/CH05.-Tensorflow">Tensorflow, 텐서플로우</a>
 - 구글이 개발한 오픈소스 소프트웨어 라이브러리이며, 머신러닝과 딥러닝을 쉽게 사용할 수 있도록 다양한 기능을 제공한다.
 - 주로 이미지 인식이나 반복 신경망 구성, 기계 번역, 필기 숫자 판별 등을 위한 각종 신경망 학습에 사용된다.
@@ -96,6 +104,8 @@
 - 검은색에 가까운 색은 0에 가깝고 흰색에 가까우면 255에 가깝다.
 - 모든 픽셀이 feature이다.
 
+---
+
 ### 📍<a href="https://github.com/SOYOUNGdev/study_deep_learning/wiki/CH06.-API(Sequential,-Functional,-Callback)">📍Sequential API, Functional API</a>
 
 #### Sequential API
@@ -103,6 +113,8 @@
 
 #### Functional API
 - Functional API는 Sequential API로는 구현하기 어려운 복잡한 모델들을 구현할 수 있다.
+
+---
 
 ### 📍<a href="https://github.com/SOYOUNGdev/study_deep_learning/wiki/CH06.-API(Sequential,-Functional,-Callback)#callback-api">Callback API</a>
 - 모델이 학습 중에 충돌이 발생하거나 네트워크가 끊기면, 모든 훈련 시간이 낭비될 수 있고,
@@ -146,6 +158,8 @@ save_weight_only=False, mode='auto')**
 #### Pooling
 - Convolution이 적용된 feature map의 일정 영역별로 하나의 값을 추출하여 feature map의 사이즈를 줄인다.
 - Max Pooling과 Average Pooling이 있으며, Max Pooling은 중요도가 가장 높은 feature를 추출하고, Average Pooling은 전체를 버무려서 추출한다.
+
+---
 
 ### <a href="https://github.com/SOYOUNGdev/study_deep_learning/wiki/CH08.-CNN-performance-%E2%80%90-Weight-Initialization,-BN,-GAP,-Weight-Regularization">📍CNN Performance</a>
 - CNN 모델을 제작할 때, 다양한 기법을 통해 성능 개선 및 과적합 개선이 가능하다.
