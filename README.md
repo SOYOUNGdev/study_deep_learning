@@ -161,7 +161,7 @@ save_weight_only=False, mode='auto')**
 
 ---
 
-### <a href="https://github.com/SOYOUNGdev/study_deep_learning/wiki/CH08.-CNN-performance-%E2%80%90-Weight-Initialization,-BN,-GAP,-Weight-Regularization">📍CNN Performance</a>
+### 📍<a href="https://github.com/SOYOUNGdev/study_deep_learning/wiki/CH08.-CNN-performance-%E2%80%90-Weight-Initialization,-BN,-GAP,-Weight-Regularization">📍CNN Performance</a>
 - CNN 모델을 제작할 때, 다양한 기법을 통해 성능 개선 및 과적합 개선이 가능하다.
 
 #### Weight Initialization, 가중치 초기화
@@ -189,3 +189,14 @@ save_weight_only=False, mode='auto')**
 - 기존 가중치에 특정 연산을 수행하여 loss function의 출력 값과 더해주면 loss function의 결과를 어느정도 제어할 수 있게 된다.
 - kernel_regularizer 파라미터에서 l1, l2을 선택할 수 있다.
 
+---
+
+### 📍<a href="https://github.com/SOYOUNGdev/study_deep_learning/wiki/CH09.-Data-Augmentation">Data Augmentation, 데이터 증강</a>
+- Data Augmentation을 통해 원본 이미지에 다양한 변형을 주어서 학습 이미지 데이터를 늘리는 것과 유사한 효과를 볼 수 있다.
+- 원본 학습 이미지의 개수를 늘리는 것이 아닌 매 학습 마다 개별 원본 이미지를 변형해서 학습을 수행한다.
+
+#### 공간 레벨 변형
+- 좌우 또는 상하 반전, 특정 영역만큼 확대, 축소, 회전 등으로 변형시킨다.
+
+#### 픽셀 레벨 변형
+- 밝기, 명암, 채도, 색상 등을 변형시킨다.
