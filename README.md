@@ -161,7 +161,7 @@ save_weight_only=False, mode='auto')**
 
 ---
 
-### 📍<a href="https://github.com/SOYOUNGdev/study_deep_learning/wiki/CH08.-CNN-performance-%E2%80%90-Weight-Initialization,-BN,-GAP,-Weight-Regularization">📍CNN Performance</a>
+### 📍<a href="https://github.com/SOYOUNGdev/study_deep_learning/wiki/CH08.-CNN-performance-%E2%80%90-Weight-Initialization,-BN,-GAP,-Weight-Regularization">CNN Performance</a>
 - CNN 모델을 제작할 때, 다양한 기법을 통해 성능 개선 및 과적합 개선이 가능하다.
 
 #### Weight Initialization, 가중치 초기화
