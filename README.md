@@ -200,3 +200,48 @@ save_weight_only=False, mode='auto')**
 
 #### 픽셀 레벨 변형
 - 밝기, 명암, 채도, 색상 등을 변형시킨다.
+
+---
+
+### 📍<a href="https://github.com/SOYOUNGdev/study_deep_learning/wiki/CH10.-Pretrained-Model">Pretrained Model</a>
+- 대규모 데이터 세트에서 훈련되고 저장된 네트워크로서, 일반적으로 대규모 이미지 분류 작업에서 훈련된 것을 뜻한다.
+- 입력 이미지는 대부분 244 * 244 크기이며, 모델 별로 차이가 있다.
+- 자동차나 고양이 등을 포함한 1000개의 클래스, 총 1400만개의 이미지로 구성된 ImageNet 데이터 세트로 사전 훈련되었다.
+
+#### ImageNet Large Scale Visual Recognition Challenge (ILSVRC)
+- 2017년까지 대회가 주최되었으며, 이후에도 좋은 모델들이 등장했고, 앞으로도 계속 등장할 것이다.
+
+---
+
+### 📍<a href="https://github.com/SOYOUNGdev/study_deep_learning/wiki/CH10.-Pretrained-Model#vggnet-%EC%98%A5%EC%8A%A4%ED%8F%AC%EB%93%9C-%EB%8C%80%ED%95%99%EC%9D%98-%EC%97%B0%EA%B5%AC%ED%8C%80">VGGNet (옥스포드 대학의 연구팀)</a>
+- 2014년 ILSVRC에서 GoogleNet이 1위, VGG는 2위를 차지했다.
+- 네트워크 깊이에 따른 모델 성능의 영향에 대한 연구에 집중하여 만들어진 네트워크이다.
+- 따라서 kernel 크기를 3X3으로 단일화했으며, Padding, Strides 값을 조정하여 단순한 네트워크로 구성되었다.
+
+---
+
+### 📍 <a href="https://github.com/SOYOUNGdev/study_deep_learning/wiki/CH10.-Pretrained-Model#inception-network-googlenet">Inception Network (GoogleNet)</a>
+- 여러 사이즈의 커널들을 한꺼번에 결합하는 방식을 사용하며, 이를 묶어서 inception module이라고 한다.
+- 여러 개의 inception module을 연속적으로 이어서 구성하고 여러 사이즈의 필터들이 서로 다른 공간 기반으로 feature들을 추출한다.
+- 1X1 Convolution을 적용하면 입력 데이터의 특징을 함축적으로 표현하면서 파라미터 수를 줄이는 차원 축소 역할을 수행하게 된다.
+
+#### 1X1 Convolution
+- 행과 열의 사이즈를 줄이고 싶다면, Pooling을 사용하면 되고, 채널 수만 줄이고 싶다면 1X1 Convolution을 사용하면 된다.
+
+---
+
+### 📍<a href="https://github.com/SOYOUNGdev/study_deep_learning/wiki/CH10.-Pretrained-Model#resnet-%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%EC%86%8C%ED%94%84%ED%8A%B8">ResNet (마이크로소프트)</a>
+- VGG 이후 더 깊은 Network에 대한 연구가 증가했지만, Network 깊이가 깊어질 수록 오히려 accuracy가 떨어지는 문제가 있었다.
+- 이를 해결하고자 층을 만들되, Input 데이터와 결과가 동일하게 나올 수 있도록 하는 층을 연구하기 시작했다.  
+
+---
+
+### 📍<a href="https://github.com/SOYOUNGdev/study_deep_learning/wiki/CH10.-Pretrained-Model#transfer-learning-%EC%A0%84%EC%9D%B4-%ED%95%99%EC%8A%B5">Transfer Learning, 전이 학습</a>
+- 이미지 분류 문제를 해결하는 데에 사용했던 모델을 다른 데이터세트 혹은 다른 문제에 적용시켜 해결하는 것을 의미한다.
+- Pretrained Model의 Convolutional Base 구조(Conv2D + Pooling)를 그대로 두고 분류기(FC)를 붙여서 학습시킨다.
+
+---
+
+### <a href="https://github.com/SOYOUNGdev/study_deep_learning/wiki/CH10.-Pretrained-Model#scaling-preprocessing">Scaling Preprocessing</a>
+- 0 ~ 1, -1 ~ 1, z-score 변환 중에서 한 개를 선택하여 범위를 축소하는 작업을 의미한다.
+- Pretrained Model은 주로 tf와 torch 프레임워크 방식을 사용한다.
