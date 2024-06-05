@@ -106,7 +106,7 @@
 
 ---
 
-### 📍<a href="https://github.com/SOYOUNGdev/study_deep_learning/wiki/CH06.-API(Sequential,-Functional,-Callback)">📍Sequential API, Functional API</a>
+### 📍<a href="https://github.com/SOYOUNGdev/study_deep_learning/wiki/CH06.-API(Sequential,-Functional,-Callback)">Sequential API, Functional API</a>
 
 #### Sequential API
 - 간단한 모델을 구현하기에 적합하고 단순하게 층을 쌓는 방식으로 쉽고 사용하기가 간단하다.
@@ -245,3 +245,11 @@ save_weight_only=False, mode='auto')**
 ### <a href="https://github.com/SOYOUNGdev/study_deep_learning/wiki/CH10.-Pretrained-Model#scaling-preprocessing">Scaling Preprocessing</a>
 - 0 ~ 1, -1 ~ 1, z-score 변환 중에서 한 개를 선택하여 범위를 축소하는 작업을 의미한다.
 - Pretrained Model은 주로 tf와 torch 프레임워크 방식을 사용한다.
+
+---
+
+### 📍<a href="https://github.com/SOYOUNGdev/study_deep_learning/wiki/CH10.-Pretrained-Model#fine-tuning-%EB%AF%B8%EC%84%B8-%EC%A1%B0%EC%A0%95">Fine Tuning, 미세 조정</a>
+- ImageNet으로 학습된 Pretrained Model을 다른 목적 또는 다른 용도로 활용할 때 Feature Extractor의 Weight를 제어하기 위한 기법이다.
+- 특정 Layer들을 Freeze시켜서 학습에서 제외시키고 Learning Rate를 점차 감소시켜 적용한다.
+- 먼저 Classification Layers에만 학습을 시킨 뒤 전체에 학습을 시키는 순서로 진행하게 되며, 이를 위해 fit()을 최소 2번 사용한다.
+- 층별로 Freeze 혹은 UnFreeze 결정을 위해 미세 조정을 진행 시, 학습률이 높으면 이전 지식을 잃을 수 있기 때문에 작은 학습률을 사용한다.
