@@ -242,7 +242,7 @@ save_weight_only=False, mode='auto')**
 
 ---
 
-### <a href="https://github.com/SOYOUNGdev/study_deep_learning/wiki/CH10.-Pretrained-Model#scaling-preprocessing">Scaling Preprocessing</a>
+### 📍<a href="https://github.com/SOYOUNGdev/study_deep_learning/wiki/CH10.-Pretrained-Model#scaling-preprocessing">Scaling Preprocessing</a>
 - 0 ~ 1, -1 ~ 1, z-score 변환 중에서 한 개를 선택하여 범위를 축소하는 작업을 의미한다.
 - Pretrained Model은 주로 tf와 torch 프레임워크 방식을 사용한다.
 
